@@ -1,0 +1,23 @@
+div {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    animation-name: exm;
+    float: left;
+    border: 1px dashed black;
+}
+
+@keyframes exm {
+0% 
+{
+     float: right;
+     background-color: red;
+    }
+ 25%   
+{
+     position: relative;
+     bottom: 5px;
+     background-color: green;
+    }
+    100%{}
+}
