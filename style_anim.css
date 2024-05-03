@@ -1,0 +1,56 @@
+body {
+   background-color: #333;
+}
+.box {
+    width: 200px;
+    height: 200px;
+    background-color: white;
+    position: relative;
+    animation-name: animation;
+    border: 1px solid black;
+    animation-duration: 4s;
+    animation-iteration-count: 3;
+    animation-delay: 1s;
+    /* חילוק הזמן בין החלקים -יתחיל לאט ימשיך מהר*/
+    animation-timing-function: ease-in-out;
+    /* סדר פעולות האנימציה */
+    /* animation-fill-mode: forwards; */
+   }
+
+@keyframes animation {
+0% 
+{
+     left: 0px;
+     /* טופ תפקידו להוסיף למעלה פיקסלים והאלמנט יורד */
+     top: 0px;
+     border-radius: 0 0 0 0;
+     background-color: white;
+    }
+ 25%   
+{    
+     top: 0px;
+     left: 300px;
+     background-color: red;
+     /* border-top-left-radius: 50% =; */
+     border-radius: 50% 0 0 0;
+    }
+    50% {
+      top: 300px;
+      /* כמו הקודם: */
+      left: 300px;
+       background-color: green;
+       border-radius: 50% 50% 0 0;
+    }
+    75% {
+       top: 300px;
+       left: 0px;
+       background-color: blue;
+       border-radius: 50% 50% 50% 0;
+    }
+    100% {
+       top: 0px;
+       left: 0px;
+       background-color: white;
+       border-radius: 50% 50% 50% 50%;
+    }
+}
